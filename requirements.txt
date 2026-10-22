@@ -1,0 +1,15 @@
+# Verification and figure scripts
+pandas>=2.0
+numpy>=1.24
+scipy>=1.11
+matplotlib>=3.7
+Pillow>=10.0
+
+# Detector training and inference (notebook only)
+ultralytics>=8.3
+torch>=2.0
+torchvision>=0.15
+
+# Dataset download and duplicate audit (notebook only)
+datasets>=2.14
+ImageHash>=4.3
