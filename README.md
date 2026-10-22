@@ -7,6 +7,29 @@ catalog label, to choose a jewelry pairing.
 Everything reported in the paper can be recomputed from the tables in `results/`
 by running one script. No GPU and no image downloads are needed for that step.
 
+## Authors
+
+Munaza Munir<sup>1</sup>, Aima Asim<sup>1</sup>, Muhammad Ahmad Zia<sup>1</sup>,
+Atif Ikram<sup>1,2</sup>, Asef Mohammad Ali Al Khateeb<sup>3</sup>,
+Marwan Abu-Zanona<sup>4,\*</sup>, Najla Abdulaziz Almousa<sup>4</sup>,
+Hebah Abdullah Abubakr<sup>4</sup>, Abdulmalik AlJabr<sup>5</sup>
+
+1. Department of Computer Science & IT, The University of Lahore, Lahore 54600, Pakistan
+2. Faculty of Computer Science and Mathematics, Universiti Malaysia Terengganu, Kuala Terengganu, Malaysia
+3. Department of Computer Science, Faculty of Computer Science and Information Technology, Jerash University, Jerash 26150, Jordan
+4. Department of Management Information Systems, College of Business Administration, King Faisal University, Al-Ahsa 31982, Saudi Arabia
+5. Applied College, King Faisal University, Al-Ahsa 31982, Saudi Arabia
+
+\* Corresponding author: Marwan Abu-Zanona (mabozanoneh@kfu.edu.sa)
+
+**Repository maintainer:** Muhammad Ahmad Zia
+([muhammad.zia@cs.uol.edu.pk](mailto:muhammad.zia@cs.uol.edu.pk),
+[ahmadzia.com](https://ahmadzia.com),
+ORCID [0000-0002-3208-6246](https://orcid.org/0000-0002-3208-6246)).
+Questions about the code, the result tables or the verification script go to the
+maintainer. Questions about the study itself go to the corresponding author.
+
+
 ## Quick start
 
 ```bash
@@ -95,3 +118,9 @@ non-circular evidence is the paired human comparison in
 ## License
 
 MIT, see `LICENSE`. The datasets carry their own licenses.
+
+## Citation
+
+Citation metadata is in `CITATION.cff`. Zenodo deposit metadata is in
+`.zenodo.json`; commit it to the repository root before tagging a release so the
+archived record carries the right authors.

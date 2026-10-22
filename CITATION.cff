@@ -6,14 +6,48 @@ license: MIT
 version: 1.0.0
 date-released: 2026-10-22
 authors:
-  - family-names: "AUTHOR-1-FAMILY-NAME-NEEDED"
-    given-names: "AUTHOR-1-GIVEN-NAME-NEEDED"
-    affiliation: "Department of Computer Science & IT, The University of Lahore"
-  - family-names: "AUTHOR-2-FAMILY-NAME-NEEDED"
-    given-names: "AUTHOR-2-GIVEN-NAME-NEEDED"
-    affiliation: "Department of Computer Science & IT, The University of Lahore"
+  - family-names: "Munir"
+    given-names: "Munaza"
+    affiliation: "Department of Computer Science & IT, The University of Lahore, Lahore 54600, Pakistan"
+  - family-names: "Asim"
+    given-names: "Aima"
+    affiliation: "Department of Computer Science & IT, The University of Lahore, Lahore 54600, Pakistan"
   - family-names: "Zia"
     given-names: "Muhammad Ahmad"
     orcid: "https://orcid.org/0000-0002-3208-6246"
     email: "muhammad.zia@cs.uol.edu.pk"
-    affiliation: "Department of Computer Science & IT, The University of Lahore"
+    affiliation: "Department of Computer Science & IT, The University of Lahore, Lahore 54600, Pakistan"
+    website: "https://ahmadzia.com"
+  - family-names: "Ikram"
+    given-names: "Atif"
+    affiliation: "Department of Computer Science & IT, The University of Lahore, Lahore 54600, Pakistan"
+  - family-names: "Al Khateeb"
+    given-names: "Asef Mohammad Ali"
+    affiliation: "Department of Computer Science, Faculty of Computer Science and Information Technology, Jerash University, Jerash 26150, Jordan"
+  - family-names: "Abu-Zanona"
+    given-names: "Marwan"
+    email: "mabozanoneh@kfu.edu.sa"
+    affiliation: "Department of Management Information Systems, College of Business Administration, King Faisal University, Al-Ahsa 31982, Saudi Arabia"
+  - family-names: "Almousa"
+    given-names: "Najla Abdulaziz"
+    affiliation: "Department of Management Information Systems, College of Business Administration, King Faisal University, Al-Ahsa 31982, Saudi Arabia"
+  - family-names: "Abubakr"
+    given-names: "Hebah Abdullah"
+    affiliation: "Department of Management Information Systems, College of Business Administration, King Faisal University, Al-Ahsa 31982, Saudi Arabia"
+  - family-names: "AlJabr"
+    given-names: "Abdulmalik"
+    affiliation: "Applied College, King Faisal University, Al-Ahsa 31982, Saudi Arabia"
+contact:
+  - family-names: "Abu-Zanona"
+    given-names: "Marwan"
+    email: "mabozanoneh@kfu.edu.sa"
+    affiliation: "Department of Management Information Systems, College of Business Administration, King Faisal University, Al-Ahsa 31982, Saudi Arabia"
+keywords:
+  - artificial intelligence
+  - neckline detection
+  - garment geometry
+  - object detection
+  - jewelry recommendation
+  - South Asian apparel
+  - human evaluation
+  - YOLOv8
