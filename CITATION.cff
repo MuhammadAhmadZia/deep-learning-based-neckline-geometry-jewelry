@@ -1,16 +1,19 @@
 cff-version: 1.2.0
 message: "If you use this replication package, please cite it as below."
-title: "Replication package for neckline geometry measurement and rule-based jewellery pairing"
+title: "Replication package for neckline geometry measurement and rule-based jewelry pairing"
 type: software
 license: MIT
 version: 1.0.0
-date-released: 2026-10-11
+date-released: 2026-10-22
 authors:
-  - family-names: "FILL IN"
-    given-names: "FILL IN"
-  - family-names: "FILL IN"
-    given-names: "FILL IN"
+  - family-names: "AUTHOR-1-FAMILY-NAME-NEEDED"
+    given-names: "AUTHOR-1-GIVEN-NAME-NEEDED"
+    affiliation: "Department of Computer Science & IT, The University of Lahore"
+  - family-names: "AUTHOR-2-FAMILY-NAME-NEEDED"
+    given-names: "AUTHOR-2-GIVEN-NAME-NEEDED"
+    affiliation: "Department of Computer Science & IT, The University of Lahore"
   - family-names: "Zia"
     given-names: "Muhammad Ahmad"
     orcid: "https://orcid.org/0000-0002-3208-6246"
+    email: "muhammad.zia@cs.uol.edu.pk"
     affiliation: "Department of Computer Science & IT, The University of Lahore"

@@ -1,8 +1,8 @@
-# Neckline Geometry Measurement and Rule-Based Jewellery Pairing
+# Neckline Geometry Measurement and Rule-Based Jewelry Pairing
 
 Replication package for a study that measures neckline geometry directly from a
-single catalogue photograph and uses that measurement, rather than the garment's
-catalogue label, to choose a jewellery pairing.
+single catalog photograph and uses that measurement, rather than the garment's
+catalog label, to choose a jewelry pairing.
 
 Everything reported in the paper can be recomputed from the tables in `results/`
 by running one script. No GPU and no image downloads are needed for that step.
@@ -12,6 +12,13 @@ by running one script. No GPU and no image downloads are needed for that step.
 ```bash
 pip install -r requirements.txt
 python scripts/verify_results.py
+```
+
+To redraw the figures, run the figure scripts from inside `scripts/`, since they
+resolve `../results/` and `../figures/` relative to themselves:
+
+```bash
+cd scripts && python fig3_openness_by_type.py
 ```
 
 The script recomputes the detector summary, the geometry table, the separation
@@ -29,7 +36,7 @@ and prints each value next to the one reported in the paper.
 | `results/type_vs_geometry_paired.csv` | The 30 matched pairs comparing per-image geometry against the label-only baseline |
 | `notebooks/neckline_geometry_pipeline.ipynb` | The full development notebook: dataset conversion, detector training, inference, geometry extraction, duplicate audit and every analysis |
 | `scripts/verify_results.py` | Recomputes all reported statistics from `results/` |
-| `scripts/fig*.py` | Figure code. `figlib.py` holds the shared palette and drawing helpers |
+| `scripts/fig*.py` | Figure code, run from inside `scripts/`. `figlib.py` holds the shared palette and drawing helpers |
 | `figures/` | The figures as published |
 
 ## Reproducing from scratch
@@ -55,9 +62,9 @@ seeds takes roughly three hours per seed on a free Colab T4.
 
 ## Data
 
-Two public sources are used. Fashionpedia supplies the labelled neckline regions
+Two public sources are used. Fashionpedia supplies the labeled neckline regions
 that teach the detector where a neckline is. The Kouture kurta set, obtained from
-Kaggle under an MIT licence, supplies South Asian garments with neckline type
+Kaggle under an MIT license, supplies South Asian garments with neckline type
 labels; its creators describe the images as sourced from various web platforms.
 The annotation file accompanying it matches the format of a Roboflow export, and
 the original annotator could not be confirmed.
@@ -85,6 +92,6 @@ type is circular when both sides are derived from the same variable. The
 non-circular evidence is the paired human comparison in
 `results/type_vs_geometry_paired.csv`.
 
-## Licence
+## License
 
-MIT, see `LICENSE`. The datasets carry their own licences.
+MIT, see `LICENSE`. The datasets carry their own licenses.

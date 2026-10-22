@@ -1,11 +1,11 @@
 """Figure 3 - openness ratio distribution by neckline type."""
 import sys
-sys.path.insert(0, "/home/claude")
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from figlib import *
 import pandas as pd
 from matplotlib.patches import Patch
 
-df = pd.read_csv("/mnt/user-data/uploads/recommendations_v4_final__1_.csv")
+df = pd.read_csv("../results/recommendations_final.csv")
 unseen = df[~df["in_train"]].copy()
 
 COLLAR = ["Mandarin Collar", "Band Collar", "Shirt Collar"]
@@ -70,6 +70,6 @@ ax.legend(handles=[
 ], loc="lower right", bbox_to_anchor=(1.0, 0.015), fontsize=7.0, frameon=False,
    handlelength=1.3, handleheight=0.9)
 
-fig.savefig("/mnt/user-data/outputs/Fig3_openness_by_type.png", dpi=400)
+fig.savefig("../figures/Fig3_openness_by_type.png", dpi=400)
 print("saved Fig3 |", len(order), "types | excluded:",
       [t for t in counts.index if counts[t] < 20])

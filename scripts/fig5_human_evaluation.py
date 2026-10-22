@@ -1,11 +1,11 @@
 """Figure 4 - human evaluation: blind control study and paired comparison."""
 import sys
-sys.path.insert(0, "/home/claude")
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from figlib import *
 import pandas as pd
 
-h = pd.read_csv("/mnt/user-data/uploads/human_eval_v2_final.csv")
-t = pd.read_csv("/mnt/user-data/uploads/type_vs_geometry_final.csv")
+h = pd.read_csv("../results/human_eval_control_study.csv")
+t = pd.read_csv("../results/type_vs_geometry_paired.csv")
 
 real = h[~h["is_control"]]; ctrl = h[h["is_control"]]
 a_vals = [(real["majority"] == "Y").mean() * 100, (ctrl["majority"] == "Y").mean() * 100]
@@ -66,5 +66,5 @@ for P in PANELS:
     ax.text(0, -0.44, P["stat"], transform=ax.transAxes, fontsize=6.5,
             color=INK_2, ha="left", va="center")
 
-fig.savefig("/mnt/user-data/outputs/Fig4_human_evaluation.png", dpi=400)
+fig.savefig("../figures/Fig5_human_evaluation.png", dpi=400)
 print("saved Fig4")

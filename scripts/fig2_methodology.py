@@ -1,12 +1,12 @@
 """Figure 2 - methodology pipeline with worked examples from the dataset."""
 import sys
-sys.path.insert(0, "/home/claude")
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from figlib import *
 import numpy as np
 from PIL import Image
 
 # ---------------------------------------------------------------- photos
-GRID = "/mnt/user-data/uploads/openness_extremes_check__1_.png"
+GRID = "../figures/Fig4_qualitative_detections.png"
 _g = Image.open(GRID).convert("RGB")
 GW, GH = _g.size
 CW, CH = GW // 5, GH // 4
@@ -60,20 +60,20 @@ def rail(y, h, c, icon, text):
 
 def card(x, y, w, h, c, title, body, ty=3.5, by=-2.3):
     rbox(ax, x, y, w, h, c, fill_amt=0.985, lw=1.25, z=4)
-    label(ax, x, y + ty, title, size=TS, weight="bold", colour=INK, z=6)
-    label(ax, x, y + by, body, size=BS, colour=INK_2, lh=1.58, z=6)
+    label(ax, x, y + ty, title, size=TS, weight="bold", color=INK, z=6)
+    label(ax, x, y + by, body, size=BS, color=INK_2, lh=1.58, z=6)
 
 def chain(y, c):
     for a_, b_ in zip(COLS, COLS[1:]):
         arrow(ax, (a_ + BW / 2 + 0.4, y), (b_ - BW / 2 - 0.4, y),
-              colour=c, lw=1.4, ms=8.5, z=6)
+              color=c, lw=1.4, ms=8.5, z=6)
 
 # ---------------------------------------------------------------- A  DATA
 yA, hA = 116.5, 17.0
 plane(yA, hA, BLUE); rail(yA, hA, BLUE, ic_stack, "DATA")
 SX, SW, SH = 41.0, 54.0, 6.0
 card(SX, yA + 3.6, SW, SH, BLUE, "Fashionpedia",
-     "46,781 images, 34,055 with a labelled neckline",
+     "46,781 images, 34,055 with a labeled neckline",
      ty=1.45, by=-1.55)
 card(SX, yA - 3.6, SW, SH, BLUE, "Kouture Kurta Set",
      "20,000 kurta photos, 1,996 boxed (Kaggle, MIT)",
@@ -82,7 +82,7 @@ card(COLS[2], yA, BW, BH, BLUE, "Detector Corpus",
      "36,051 images merged\n80 / 10 / 10 split by product ID")
 for dy, rad in ((3.6, -0.26), (-3.6, 0.26)):
     arrow(ax, (SX + SW / 2 + 0.4, yA + dy), (COLS[2] - BW / 2 - 0.4, yA),
-          colour=BLUE, lw=1.4, ms=8.5, z=6, rad=rad)
+          color=BLUE, lw=1.4, ms=8.5, z=6, rad=rad)
 
 # ---------------------------------------------------------------- B  DETECTOR
 yB, hB = 97.0, 17.0
@@ -120,7 +120,7 @@ ex_xs = [27.0, 46.5, 66.0, 85.5]
 for (rc, name, val), x in zip(EX, ex_xs):
     place_photo(ax, cell_photo(*rc), x, yX + 2.2, 18.0, 12.8, TEAL)
     label(ax, x, yX - 6.0, f"{name}\nopenness = {val:.2f}", size=6.9,
-          colour=INK_2, lh=1.45, z=7)
+          color=INK_2, lh=1.45, z=7)
 
 # ---------------------------------------------------------------- D  RULES
 yD, hD = 34.5, 17.0
@@ -148,19 +148,19 @@ ax.plot([COLS[0], COLS[2]], [BUS_Y, BUS_Y], color=ROSE, lw=1.4, zorder=6,
         solid_capstyle="round")
 ax.add_patch(Circle((COLS[1], BUS_Y), 0.8, facecolor=ROSE, edgecolor="none", zorder=7))
 for x in COLS:
-    arrow(ax, (x, BUS_Y - 0.1), (x, EB_Y + EB_H / 2 + 0.4), colour=ROSE,
+    arrow(ax, (x, BUS_Y - 0.1), (x, EB_Y + EB_H / 2 + 0.4), color=ROSE,
           lw=1.4, ms=8.5, z=6)
 label(ax, PLANE_R - 1.5, BUS_Y + 2.0, "three independent arms", size=6.2,
-      colour=MUTED, ha="right", style="italic")
+      color=MUTED, ha="right", style="italic")
 
 # ---------------------------------------------------------------- band links
 LINKS = [((yA, hA), (yB, hB)), ((yB, hB), (yC, hC)), ((yC, hC), (yX, hX)),
          ((yX, hX), (yD, hD))]
 for (yt, ht), (yb, hb) in LINKS:
     arrow(ax, (COLS[1], yt - ht / 2 - 0.15), (COLS[1], yb + hb / 2 + 0.15),
-          colour=HAIRLINE, lw=2.0, ms=11, z=6)
+          color=HAIRLINE, lw=2.0, ms=11, z=6)
 arrow(ax, (COLS[1], yD - hD / 2 - 0.15), (COLS[1], BUS_Y + 1.0),
-      colour=HAIRLINE, lw=2.0, ms=11, z=6)
+      color=HAIRLINE, lw=2.0, ms=11, z=6)
 
-fig.savefig("/mnt/user-data/outputs/Fig2_methodology.png", dpi=400)
+fig.savefig("../figures/Fig2_methodology.png", dpi=400)
 print("saved Fig2  |  figure height in:", round(W_IN * (YHI - YLO) / XMAX, 2))
